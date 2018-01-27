@@ -12,6 +12,9 @@ public class BeatSpawner : MonoBehaviour {
     public GameObject BAR;
     public List<GameObject> BAR_List;
 
+    [Header("The List for the bars on queue")]
+    public List<GameObject> Queue_List;
+
     private void Awake()
     {
         m_instance = this;
@@ -39,8 +42,9 @@ public class BeatSpawner : MonoBehaviour {
             if(obj.activeSelf == false)
             {
                 obj.transform.position = StartPoint.transform.position;
-                obj.GetComponent<BeatScript>().f_speed = Vector3.Distance(EndPoint.transform.position, StartPoint.transform.position) / 1.0f;
+                obj.GetComponent<BeatScript>().f_speed = Vector3.Distance(EndPoint.transform.position, StartPoint.transform.position) / SCORE_Manager.m_instance.f_NoteSpeed;
                 obj.GetComponent<BeatScript>().endPoint = EndPoint.transform.position;
+                Queue_List.Add(obj);
                 obj.SetActive(true);
                 break;
             }
