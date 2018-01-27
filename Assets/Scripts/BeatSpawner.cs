@@ -21,7 +21,7 @@ public class BeatSpawner : MonoBehaviour {
     void Start () {
         for (int i = 0; i < 10; i++)
         {
-            GameObject tempObj = GameObject.Instantiate(BAR);
+			GameObject tempObj = GameObject.Instantiate(BAR, transform);
             tempObj.SetActive(false);
             BAR_List.Add(tempObj);
         }
