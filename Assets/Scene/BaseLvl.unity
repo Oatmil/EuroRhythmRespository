@@ -645,7 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a5376512f1ba44680f002c68aa9d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A_AudioDelay: -0.025
+  A_AudioDelay: 0.025
   xmlpath:
   - Note1_Data.xml
   - Note2_Data.xml
