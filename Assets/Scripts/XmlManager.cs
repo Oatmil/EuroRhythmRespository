@@ -5,8 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class XmlManager : MonoBehaviour {
-
+public class XmlManager : MonoBehaviour
+{
+    [Header("")]
     public float A_AudioDelay;
 
     bool XmlLoaded = false;
@@ -22,11 +23,12 @@ public class XmlManager : MonoBehaviour {
     bool DownArrow = false;
     bool LeftArrow = false;
     bool RightArrow = false;
-    
+
     public GameObject testManualStick;
-    
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start()
+    {
         LoadXML(0);
         StartCoroutine(PRINTXML_NOTES(0));
         Debug.Log("finish");
@@ -55,7 +57,7 @@ public class XmlManager : MonoBehaviour {
         bool b_stop = false;
         float f_Timer = 0;
         AudioManager.m_instace.Select_Song(i_level);
-        yield return new WaitUntil(()=>(SpaceBar == true));
+        yield return new WaitUntil(() => (SpaceBar == true));
 
         yield return new WaitForEndOfFrame();
         SpaceBar = false;
@@ -68,7 +70,7 @@ public class XmlManager : MonoBehaviour {
         do
         {
             f_Timer += Time.deltaTime;
-            if(UpArrow)
+            if (UpArrow)
             {
                 testManualStick.transform.position += new Vector3(0, 1, 0);
                 UpArrow = false;
@@ -89,7 +91,7 @@ public class XmlManager : MonoBehaviour {
             if (RightArrow)
             {
                 testManualStick.transform.position += new Vector3(1, 0, 0);
-                RightArrow = false; 
+                RightArrow = false;
                 AddNewNote("RIGHT", f_Timer.ToString());
             }
 
@@ -118,20 +120,20 @@ public class XmlManager : MonoBehaviour {
             {
                 if (float.Parse(nodeList[i].SelectSingleNode("time").InnerText) <= f_Timer)
                 {
-                   // Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
+                    // Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
                     switch (nodeList[i].SelectSingleNode("Direction").InnerText)
                     {
                         case "UP":
-                            BeatSpawner.m_instance.SpawnNote();
+                            BeatSpawner.m_instance.SpawnNote(int.Parse(nodeList[i].SelectSingleNode("stick").InnerText));
                             break;
                         case "DOWN":
-                            BeatSpawner.m_instance.SpawnNote();
+                            BeatSpawner.m_instance.SpawnNote(int.Parse(nodeList[i].SelectSingleNode("stick").InnerText));
                             break;
                         case "RIGHT":
-                            BeatSpawner.m_instance.SpawnNote();
+                            BeatSpawner.m_instance.SpawnNote(int.Parse(nodeList[i].SelectSingleNode("stick").InnerText));
                             break;
                         case "LEFT":
-                            BeatSpawner.m_instance.SpawnNote();
+                            BeatSpawner.m_instance.SpawnNote(int.Parse(nodeList[i].SelectSingleNode("stick").InnerText));
                             break;
                     }
 
@@ -158,7 +160,6 @@ public class XmlManager : MonoBehaviour {
         AudioManager.m_instace.PlaySong();
         b_stop = false;
         int i = 0;
-        float f_Scaller = 0;
         yield return new WaitForEndOfFrame();
         StartCoroutine(SpawnNotes(nodeList));
         do
@@ -168,20 +169,20 @@ public class XmlManager : MonoBehaviour {
             {
                 if (float.Parse(nodeList[i].SelectSingleNode("time").InnerText) <= f_Timer)
                 {
-                   // Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
+                    // Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
                     switch (nodeList[i].SelectSingleNode("Direction").InnerText)
                     {
                         case "UP":
-                            testManualStick.transform.position += new Vector3(0, 1, 0);
+                            testManualStick.transform.position += new Vector3(0, 1.7f, 0);
                             break;
                         case "DOWN":
-                            testManualStick.transform.position += new Vector3(0, -1, 0);
+                            testManualStick.transform.position += new Vector3(0, -1.7f, 0);
                             break;
                         case "RIGHT":
-                            testManualStick.transform.position += new Vector3(1, 0, 0);
+                            testManualStick.transform.position += new Vector3(1.3f, 0, 0);
                             break;
                         case "LEFT":
-                            testManualStick.transform.position += new Vector3(-1, 0, 0);
+                            testManualStick.transform.position += new Vector3(-1.3f, 0, 0);
                             break;
                     }
 
@@ -206,13 +207,19 @@ public class XmlManager : MonoBehaviour {
             Debug.Log("Time");
             yield return new WaitForEndOfFrame();
             SpaceBar = false;
-            BeatSpawner.m_instance.SpawnNote();
+            baba = true;
+            BeatSpawner.m_instance.SpawnNote(5);
             temptemp = 0;
             do
             {
                 temptemp += Time.deltaTime;
-                
+
                 if (SpaceBar)
+                {
+                    SpaceBar = false;
+                    baba = false;
+                }
+                if (BeatSpawner.m_instance.Queue_List[0].transform.localScale.x <= 1)
                 {
                     SpaceBar = false;
                     baba = false;
@@ -221,7 +228,7 @@ public class XmlManager : MonoBehaviour {
             } while (baba);
 
             Debug.Log(temptemp);
-            
+
         } while (bbbb);
     }
 
@@ -239,7 +246,7 @@ public class XmlManager : MonoBehaviour {
         XMLDoc.Save(Path.Combine(Application.dataPath, xmlpath[i]));
     }
 
-    void AddNewNote(string s_Direction , string s_time) // Add node under the main node
+    void AddNewNote(string s_Direction, string s_time) // Add node under the main node
     {
         XmlElement notes = XMLDoc.CreateElement("note");
 
@@ -253,8 +260,8 @@ public class XmlManager : MonoBehaviour {
         notes.AppendChild(DIRECTION);
 
         XMLDoc.DocumentElement.AppendChild(notes);
-        
+
     }
-    
-    
+
+
 }

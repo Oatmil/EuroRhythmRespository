@@ -5,7 +5,7 @@ using UnityEngine;
 public class BeatScript : MonoBehaviour {
 
     public float f_speed;
-    public Vector3 endPoint;
+    public GameObject endPoint;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,30 +13,30 @@ public class BeatScript : MonoBehaviour {
 
     private void OnGUI()
     {
-        if (transform.position.x > endPoint.x - SCORE_Manager.m_instance.f_HitSpacing && BeatSpawner.m_instance.Queue_List[0] == this.gameObject)
+        if (transform.GetChild(0).transform.localScale.x > endPoint.transform.localScale.x - SCORE_Manager.m_instance.f_HitSpacing && BeatSpawner.m_instance.Queue_List[0] == this.gameObject)
         {
             if (Event.current.Equals(Event.KeyboardEvent("space")))
             {
-                if (Vector3.Distance(endPoint, transform.position) <= SCORE_Manager.m_instance.f_HitSpacing)
-                {
-                    Debug.Log(Vector3.Distance(endPoint, transform.position));
-                    SCORE_Manager.m_instance.SCORE();
-                    BeatSpawner.m_instance.Queue_List.RemoveAt(0);
-                    gameObject.SetActive(false);
-                }
+            if (Mathf.Abs(transform.GetChild(0).transform.localScale.x - endPoint.transform.localScale.x) <= SCORE_Manager.m_instance.f_HitSpacing)
+            {
+            //    Debug.Log(Mathf.Abs(transform.localScale.x - endPoint.transform.localScale.x));
+                SCORE_Manager.m_instance.SCORE();
+                BeatSpawner.m_instance.Queue_List.RemoveAt(0);
+                gameObject.SetActive(false);
+            }
             }
         }
-        
     }
 
 	// Update is called once per frame
 	void Update () {
-        Vector3 movement = new Vector3(-1, 0, 0) * f_speed *Time.deltaTime;
-        transform.position += movement;
+        Vector3 scalling = new Vector3(-1, -1, 0) * f_speed *Time.deltaTime;
+        transform.GetChild(0).transform.localScale += scalling;
 
         
-        if (transform.position.x < endPoint.x - SCORE_Manager.m_instance.f_HitSpacing )
+        if (transform.GetChild(0).transform.localScale.x < endPoint.transform.localScale.x - SCORE_Manager.m_instance.f_HitSpacing )
         {
+      //      Debug.Log(transform.GetChild(0).transform.localScale.x - endPoint.transform.localScale.x);
             SCORE_Manager.m_instance.TOTALMISS();
             BeatSpawner.m_instance.Queue_List.RemoveAt(0);
             gameObject.SetActive(false);
