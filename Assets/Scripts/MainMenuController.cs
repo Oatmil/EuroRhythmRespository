@@ -5,39 +5,28 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour 
 {
-	[SerializeField] private RectTransform menuObjects;
+	[SerializeField] private GameObject Credits;
+	[SerializeField] private GameObject Songs;
+	[SerializeField] private Animator Anim;
 
 	public void PressStart()
 	{
-		TransitToSongSelect();
+		Songs.SetActive(true);
+		Credits.SetActive(false);
+		
+		Anim.Play("PressedButton");
 	}
 
 	public void PressCredits()
 	{
-		TransitToCredits();
+		Songs.SetActive(false);
+		Credits.SetActive(true);
+
+		Anim.Play("PressedButton");
 	}
 
-	void TransitToSongSelect()
+	public void PressBack()
 	{
-		StartCoroutine(MenuTransition());
-	}
-
-	void TransitToCredits()
-	{
-		StartCoroutine(MenuTransition());
-	}
-
-	IEnumerator MenuTransition()
-	{
-		float tempFloat = 0;
-		while (tempFloat < 1)
-		{
-			yield return new WaitForEndOfFrame();
-			tempFloat += .5f * Time.deltaTime;
-			menuObjects.anchoredPosition = Vector2.Lerp(Vector2.zero, menuObjects.right * -750, tempFloat);
-		}			
-
-		//yield return null;
-		StopCoroutine(MenuTransition());
+		Anim.Play("PressedBack");
 	}
 }
