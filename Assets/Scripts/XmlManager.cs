@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class XmlManager : MonoBehaviour {
-    
+
+    public float A_AudioDelay;
+
     bool XmlLoaded = false;
     XmlDocument XMLDoc;
 
@@ -20,14 +22,13 @@ public class XmlManager : MonoBehaviour {
     bool DownArrow = false;
     bool LeftArrow = false;
     bool RightArrow = false;
-
-    public GameObject RingTimer;
+    
     public GameObject testManualStick;
     
 	// Use this for initialization
 	void Start () {
-        LoadXML(1);
-        StartCoroutine(PRINTXML_NOTES(1));
+        LoadXML(0);
+        StartCoroutine(PRINTXML_NOTES(0));
         Debug.Log("finish");
     }
 
@@ -108,7 +109,7 @@ public class XmlManager : MonoBehaviour {
     IEnumerator SpawnNotes(XmlNodeList nodeList)
     {
         bool b_stop = false;
-        float f_Timer = 0 + 1.0f;
+        float f_Timer = 0 + SCORE_Manager.m_instance.f_NoteSpeed + A_AudioDelay;
         int i = 0;
         do
         {
@@ -117,7 +118,7 @@ public class XmlManager : MonoBehaviour {
             {
                 if (float.Parse(nodeList[i].SelectSingleNode("time").InnerText) <= f_Timer)
                 {
-                    Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
+                   // Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
                     switch (nodeList[i].SelectSingleNode("Direction").InnerText)
                     {
                         case "UP":
@@ -165,12 +166,9 @@ public class XmlManager : MonoBehaviour {
             f_Timer += Time.deltaTime;
             if (nodeList[i] != null)
             {
-                f_Scaller = float.Parse(nodeList[i].SelectSingleNode("time").InnerText) - f_Timer;
-
-                RingTimer.transform.localScale = (Vector2.one * f_Scaller ) + Vector2.one;
                 if (float.Parse(nodeList[i].SelectSingleNode("time").InnerText) <= f_Timer)
                 {
-                    Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
+                   // Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
                     switch (nodeList[i].SelectSingleNode("Direction").InnerText)
                     {
                         case "UP":

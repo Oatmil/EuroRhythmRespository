@@ -5,12 +5,10 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
 
     public static AudioManager m_instace;
-
+    
     [Header ("List of songs to have in the game also use as the levels")]
     public List<AudioClip> Audio_Clips;
-
-    [Header("BPM List")]
-    public List<int> BPM_List;
+    
       
     [Space]
     AudioSource a_source;
@@ -40,9 +38,5 @@ public class AudioManager : MonoBehaviour {
     {
         a_source.Play();
     }
-
-    public void BPMCounter(int i_select)
-    {
-        
-    }
+    
 }
