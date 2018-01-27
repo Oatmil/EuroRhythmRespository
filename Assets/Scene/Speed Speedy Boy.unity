@@ -164,7 +164,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 628c792b1fdd698419001753abd4c82a, type: 3}
-  m_Color: {r: 1, g: 0.8161765, b: 0.8161765, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 1191346972}
   - component: {fileID: 1191346973}
   - component: {fileID: 1191346971}
+  - component: {fileID: 1191346975}
   m_Layer: 0
   m_Name: XMLManager
   m_TagString: Untagged
@@ -620,6 +621,20 @@ MonoBehaviour:
   i_Life: 0
   f_NoteSpeed: 0.725
   HighScore: 0
+--- !u!114 &1191346975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1191346968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f913332e094374181257bb4ba78f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BARSSSSS: {fileID: 1236185060311420, guid: e09dd640e7509314dbdafafce65e6b2f, type: 2}
+  Num_Boxes: 20
+  AudioVisualizer_List: []
 --- !u!1 &1562723523
 GameObject:
   m_ObjectHideFlags: 0
