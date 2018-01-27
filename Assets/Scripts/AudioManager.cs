@@ -9,6 +9,10 @@ public class AudioManager : MonoBehaviour {
     [Header ("List of songs to have in the game also use as the levels")]
     public List<AudioClip> Audio_Clips;
 
+    [Header("BPM List")]
+    public List<int> BPM_List;
+      
+    [Space]
     AudioSource a_source;
 
     void Awake()
@@ -35,5 +39,10 @@ public class AudioManager : MonoBehaviour {
     public void PlaySong()
     {
         a_source.Play();
+    }
+
+    public void BPMCounter(int i_select)
+    {
+        
     }
 }

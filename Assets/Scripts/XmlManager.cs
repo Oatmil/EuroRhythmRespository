@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class XmlManager : MonoBehaviour {
-
+    
     bool XmlLoaded = false;
     XmlDocument XMLDoc;
 
@@ -21,12 +21,13 @@ public class XmlManager : MonoBehaviour {
     bool LeftArrow = false;
     bool RightArrow = false;
 
+    public GameObject RingTimer;
     public GameObject testManualStick;
-
+    
 	// Use this for initialization
 	void Start () {
-        LoadXML(0);
-        StartCoroutine(PRINTXML_NOTES(0));
+        LoadXML(1);
+        StartCoroutine(PRINTXML_NOTES(1));
         Debug.Log("finish");
     }
 
@@ -104,6 +105,43 @@ public class XmlManager : MonoBehaviour {
         yield return null;
     }
 
+    IEnumerator SpawnNotes(XmlNodeList nodeList)
+    {
+        bool b_stop = false;
+        float f_Timer = 0 + 1.0f;
+        int i = 0;
+        do
+        {
+            f_Timer += Time.deltaTime;
+            if (nodeList[i] != null)
+            {
+                if (float.Parse(nodeList[i].SelectSingleNode("time").InnerText) <= f_Timer)
+                {
+                    Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
+                    switch (nodeList[i].SelectSingleNode("Direction").InnerText)
+                    {
+                        case "UP":
+                            BeatSpawner.m_instance.SpawnNote();
+                            break;
+                        case "DOWN":
+                            BeatSpawner.m_instance.SpawnNote();
+                            break;
+                        case "RIGHT":
+                            BeatSpawner.m_instance.SpawnNote();
+                            break;
+                        case "LEFT":
+                            BeatSpawner.m_instance.SpawnNote();
+                            break;
+                    }
+
+                    i++;
+                }
+            }
+            yield return new WaitForEndOfFrame();
+        } while (!b_stop);
+        yield return null;
+    }
+
     IEnumerator PRINTXML_NOTES(int i_level)
     {
         b_Respond = true;
@@ -119,12 +157,17 @@ public class XmlManager : MonoBehaviour {
         AudioManager.m_instace.PlaySong();
         b_stop = false;
         int i = 0;
+        float f_Scaller = 0;
         yield return new WaitForEndOfFrame();
+        StartCoroutine(SpawnNotes(nodeList));
         do
         {
             f_Timer += Time.deltaTime;
             if (nodeList[i] != null)
             {
+                f_Scaller = float.Parse(nodeList[i].SelectSingleNode("time").InnerText) - f_Timer;
+
+                RingTimer.transform.localScale = (Vector2.one * f_Scaller ) + Vector2.one;
                 if (float.Parse(nodeList[i].SelectSingleNode("time").InnerText) <= f_Timer)
                 {
                     Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
