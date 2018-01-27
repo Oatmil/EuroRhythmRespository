@@ -17,7 +17,7 @@ public class XmlManager : MonoBehaviour {
 
     bool b_Respond = false;
 
-    bool SpaceBar = false;
+    public bool SpaceBar = false;
     bool UpArrow = false;
     bool DownArrow = false;
     bool LeftArrow = false;
@@ -194,6 +194,36 @@ public class XmlManager : MonoBehaviour {
         yield return null;
     }
 
+    IEnumerator DelayTest()
+    {
+        Debug.Log("Start");
+        bool bbbb = true;
+        bool baba = true;
+        float temptemp = 0;
+        do
+        {
+            yield return new WaitUntil(() => (SpaceBar == true));
+            Debug.Log("Time");
+            yield return new WaitForEndOfFrame();
+            SpaceBar = false;
+            BeatSpawner.m_instance.SpawnNote();
+            temptemp = 0;
+            do
+            {
+                temptemp += Time.deltaTime;
+                
+                if (SpaceBar)
+                {
+                    SpaceBar = false;
+                    baba = false;
+                }
+                yield return new WaitForEndOfFrame();
+            } while (baba);
+
+            Debug.Log(temptemp);
+            
+        } while (bbbb);
+    }
 
     void LoadXML(int i) //Load the XML out to be used and access
     {
