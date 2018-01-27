@@ -2,347 +2,195 @@
 <!-- Location: C:\Users\PC\Desktop\DBASEIV\FHDATA\MACHINER.DBF -->
 <XML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <note>
-    <time>3.877968</time>
+    <time>1.546943</time>
     <Direction>LEFT</Direction>
   </note>
   <note>
-    <time>5.384588</time>
-    <Direction>UP</Direction>
+    <time>1.795992</time>
+    <Direction>LEFT</Direction>
   </note>
   <note>
-    <time>9.943393</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>12.96786</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>16.01551</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>19.0642</time>
+    <time>2.487978</time>
     <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>22.13362</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>23.63173</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>24.38301</time>
-    <Direction>LEFT</Direction>
-  </note>
-  <note>
-    <time>25.22363</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>26.73655</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>27.49363</time>
+    <time>2.691549</time>
     <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>28.28558</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>29.76709</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>30.5588</time>
-    <Direction>LEFT</Direction>
-  </note>
-  <note>
-    <time>31.35049</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>32.84671</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>33.57491</time>
+    <time>2.859683</time>
     <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>34.36791</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>38.18231</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>38.52881</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>41.2475</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>41.63198</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>46.5522</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>47.38282</time>
-    <Direction>LEFT</Direction>
-  </note>
-  <note>
-    <time>48.16686</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>48.94371</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>49.67926</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>50.45644</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>51.22216</time>
+    <time>3.021269</time>
     <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>51.99853</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>53.48645</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>53.86337</time>
-    <Direction>LEFT</Direction>
-  </note>
-  <note>
-    <time>54.26434</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>55.81532</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>56.54436</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>57.34167</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>58.10368</time>
+    <time>3.171881</time>
     <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>58.8712</time>
+    <time>3.360736</time>
     <Direction>UP</Direction>
   </note>
   <note>
-    <time>60.36737</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>60.90622</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>61.3022</time>
+    <time>3.508673</time>
     <Direction>UP</Direction>
   </note>
   <note>
-    <time>61.70954</time>
+    <time>3.66127</time>
+    <Direction>UP</Direction>
+  </note>
+  <note>
+    <time>3.824687</time>
+    <Direction>UP</Direction>
+  </note>
+  <note>
+    <time>3.990407</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>4.16721</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>4.334547</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>4.515565</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>4.699161</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>4.866589</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>5.049304</time>
+    <Direction>DOWN</Direction>
+  </note>
+  <note>
+    <time>5.217428</time>
+    <Direction>DOWN</Direction>
+  </note>
+  <note>
+    <time>5.375627</time>
+    <Direction>DOWN</Direction>
+  </note>
+  <note>
+    <time>5.55851</time>
+    <Direction>DOWN</Direction>
+  </note>
+  <note>
+    <time>5.707913</time>
+    <Direction>DOWN</Direction>
+  </note>
+  <note>
+    <time>5.88614</time>
+    <Direction>DOWN</Direction>
+  </note>
+  <note>
+    <time>6.050657</time>
+    <Direction>DOWN</Direction>
+  </note>
+  <note>
+    <time>6.224482</time>
     <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>62.31788</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>62.69699</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>63.00638</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>63.4796</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>64.24695</time>
-    <Direction>LEFT</Direction>
-  </note>
-  <note>
-    <time>64.80653</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>65.35988</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>65.55198</time>
-    <Direction>LEFT</Direction>
-  </note>
-  <note>
-    <time>65.73415</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>66.49569</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>67.02279</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>67.39806</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>67.75108</time>
+    <time>6.392503</time>
     <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>68.39036</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>68.77386</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>68.94286</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>69.53547</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>69.6937</time>
-    <Direction>LEFT</Direction>
-  </note>
-  <note>
-    <time>70.32788</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>71.15234</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>71.27896</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>71.51231</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>71.68703</time>
+    <time>6.542138</time>
     <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>72.07262</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>72.75961</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>72.90417</time>
-    <Direction>LEFT</Direction>
-  </note>
-  <note>
-    <time>73.0726</time>
-    <Direction>UP</Direction>
-  </note>
-  <note>
-    <time>73.30486</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>73.63892</time>
+    <time>6.700187</time>
     <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>74.00623</time>
+    <time>6.877306</time>
+    <Direction>RIGHT</Direction>
+  </note>
+  <note>
+    <time>7.110214</time>
     <Direction>UP</Direction>
   </note>
   <note>
-    <time>74.53619</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>74.92005</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>75.11121</time>
+    <time>7.288936</time>
     <Direction>UP</Direction>
   </note>
   <note>
-    <time>75.66982</time>
+    <time>7.468188</time>
     <Direction>UP</Direction>
   </note>
   <note>
-    <time>77.59041</time>
-    <Direction>DOWN</Direction>
-  </note>
-  <note>
-    <time>77.77602</time>
+    <time>7.642435</time>
     <Direction>LEFT</Direction>
   </note>
   <note>
-    <time>77.96704</time>
+    <time>7.825412</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>8.004145</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>8.19902</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>8.397038</time>
     <Direction>DOWN</Direction>
   </note>
   <note>
-    <time>78.71301</time>
-    <Direction>UP</Direction>
+    <time>8.657013</time>
+    <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>79.06962</time>
-    <Direction>UP</Direction>
+    <time>8.822983</time>
+    <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>80.64841</time>
+    <time>9.014273</time>
+    <Direction>RIGHT</Direction>
+  </note>
+  <note>
+    <time>9.210614</time>
     <Direction>DOWN</Direction>
   </note>
   <note>
-    <time>81.02259</time>
-    <Direction>DOWN</Direction>
+    <time>9.414801</time>
+    <Direction>RIGHT</Direction>
   </note>
   <note>
-    <time>81.69616</time>
+    <time>9.567463</time>
+    <Direction>RIGHT</Direction>
+  </note>
+  <note>
+    <time>9.748837</time>
     <Direction>UP</Direction>
   </note>
   <note>
-    <time>81.88671</time>
-    <Direction>UP</Direction>
+    <time>10.03046</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>10.19882</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>10.38604</time>
+    <Direction>LEFT</Direction>
+  </note>
+  <note>
+    <time>10.53582</time>
+    <Direction>LEFT</Direction>
   </note>
 </XML>

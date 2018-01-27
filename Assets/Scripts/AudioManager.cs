@@ -40,9 +40,5 @@ public class AudioManager : MonoBehaviour {
     {
         a_source.Play();
     }
-
-    public void BPMCounter(int i_select)
-    {
-        
-    }
+    
 }
