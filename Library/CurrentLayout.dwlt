@@ -508,7 +508,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff00000000
+    m_ExpandedIDs: b4faffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -570,19 +570,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/MusicFiles/BGM
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/MusicFiles/BGM
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: D:\UniFolder\EuroRhythmTransmission
+  m_LastProjectPath: D:\Unity Projects\GGJ2018
   m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 62270000
-    m_LastClickedID: 10082
-    m_ExpandedIDs: 0000000062270000b427000000ca9a3bffffff7f
+    m_SelectedIDs: ac270000
+    m_LastClickedID: 10156
+    m_ExpandedIDs: 00000000a6270000f427000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -610,7 +610,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: ea060000
     m_LastClickedID: 1770
-    m_ExpandedIDs: 0000000062270000b4270000
+    m_ExpandedIDs: 00000000a6270000f4270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 741c0000361e0000a21d0000fa040000aa1c0000fe040000f8040000ec040000e00400006a280000ce0500000a0500001006000008050000120500001a20000016050000200500005e1c0000341c00001c070000c80500007ad0ffff3e0900008e850000060900001c060000ae250000281d0000dc270000b8060000ae310000a6310000a2310000aa310000b2310000b81f0000c01d0000c406000046060000400600004c060000360600001e090000082c0000c26afeff280b0000fe0600007e0c0000182600007a0c0000fc0600000ce4000012e40000540e00003e3700003637000008070000480d00003c0d0000dccc00003ece0000087b00000c7b0000fc7a0000f87a000006070000620d0000cc3c0000160700000a2a0000220c000022060000260600002c3300002833000080240000b4060000c00800009c230000c2210000c6bfe8ff4e2000002c0600006e1d0000ccaafbff162400003e51f6ff10b9f4ffd01f00005a06000050060000ca200000fc260000d02000005606000056280000d2c6f9fffe83f3ff1e070000fc2000002e070000ec37000080e8f7ff64060000b40c00002a380000940600008e0f0000e077fdff0c10000062100000de0e000000000000e01d0000ea1d00006a060000820600006c06000072060000ca0a00008406000022070000740600007c0600001e0b0000a42b01004e0700004a0c00006a0f0000de040000b0230000de4cf9ff3a05000024050000e2040000763b0000f204000036050000e8040000e2240000d4240000d6240000c65ec8ff2a470000a2350000a86100000062000010290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
