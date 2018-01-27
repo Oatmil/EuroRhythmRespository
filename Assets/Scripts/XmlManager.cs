@@ -26,8 +26,8 @@ public class XmlManager : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        LoadXML(1);
-        StartCoroutine(PRINTXML_NOTES(1));
+        LoadXML(0);
+        StartCoroutine(PRINTXML_NOTES(0));
         Debug.Log("finish");
     }
 
