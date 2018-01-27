@@ -359,7 +359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 533898818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.09, y: 3.53, z: 0}
+  m_LocalPosition: {x: -5.69, y: 3.53, z: 0}
   m_LocalScale: {x: 0.9603821, y: 0.9603822, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -405,8 +405,8 @@ Camera:
   m_GameObject: {fileID: 600220066}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.83823526, g: 0.7876521, b: 0.62251294, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -524,7 +524,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 792138279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.09, y: 3.53, z: 0}
+  m_LocalPosition: {x: -7.69, y: 3.53, z: 0}
   m_LocalScale: {x: 0.9603821, y: 0.9603822, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -645,10 +645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a5376512f1ba44680f002c68aa9d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A_AudioDelay: -0.025
+  A_AudioDelay: 0.24
   xmlpath:
   - Note1_Data.xml
   - Note2_Data.xml
+  SpaceBar: 0
   testManualStick: {fileID: 1890385171}
 --- !u!4 &1191346970
 Transform:
@@ -784,10 +785,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aabbdab3a13edb4ea9239c8a52d17a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  f_HitSpacing: 1.3
+  f_HitSpacing: 2
   f_ComboCounter: 0
   i_Life: 0
-  f_NoteSpeed: 0.6
+  f_NoteSpeed: 0.75
   HighScore: 0
 --- !u!1 &1562723523
 GameObject:
@@ -1068,7 +1069,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123090935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.09, y: 3.53, z: 0}
+  m_LocalPosition: {x: -6.69, y: 3.53, z: 0}
   m_LocalScale: {x: 0.9603821, y: 0.9603822, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
