@@ -180,9 +180,11 @@ public class XmlManager : MonoBehaviour
                             break;
                         case "RIGHT":
                             testManualStick.transform.position += new Vector3(1.3f, 0, 0);
+                            testManualStick.transform.localEulerAngles += new Vector3(0, 0, -13);
                             break;
                         case "LEFT":
                             testManualStick.transform.position += new Vector3(-1.3f, 0, 0);
+                            testManualStick.transform.localEulerAngles += new Vector3(0, 0, 13);
                             break;
                     }
 

@@ -4,51 +4,34 @@ using UnityEngine;
 
 public class TJ_Audio_Visual : MonoBehaviour {
 
-    public GameObject BARSSSSS;
-    public float Num_Boxes;
-    float f_Val;
-
-    public List<GameObject> AudioVisualizer_List;
+    public GameObject BG;
+    public float Modifier;
+    Color BG_Color;
+    
 	// Use this for initialization
 	void Start () {
-        for (int i = 0; i < Num_Boxes; i++)
-        {
-            if (i % 2 == 0)
-            {
-                GameObject tempobj = GameObject.Instantiate(BARSSSSS, transform);
-                tempobj.transform.position = new Vector3(-9, (i * (9/Num_Boxes)) -4, -2);
-                tempobj.transform.localScale = Vector3.one;
-                AudioVisualizer_List.Add(tempobj);
-            }
-            else
-            {
-                GameObject tempobj = GameObject.Instantiate(BARSSSSS, transform);
-                tempobj.transform.position = new Vector3(9, (i * (9 / Num_Boxes)) - 4, -2);
-                tempobj.transform.localScale = Vector3.one *-1;
-                AudioVisualizer_List.Add(tempobj);
-            }
-        }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        f_Val = 0;
+        BG_Color = Color.white;
+        if (BG.GetComponent<SpriteRenderer>() != null)
+            BG_Color = BG.GetComponent<SpriteRenderer>().color;
+    }
 
-        float[] spectrum = new float[256];
 
-        AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
+    // Update is called once per frame
+    void Update () {
 
-        for(int i=0; i<AudioVisualizer_List.Count; i ++)
-        {
-            for(int j=0; j<10*(Num_Boxes-i); j++)
-            {
-                f_Val += spectrum[j];
-            }
-            if (AudioVisualizer_List[i].transform.localScale.x > 0)
-                AudioVisualizer_List[i].transform.localScale = new Vector3(f_Val/10.0f, AudioVisualizer_List[i].transform.localScale.y, 0);
-            else
-                AudioVisualizer_List[i].transform.localScale = new Vector3(-f_Val/10.0f, AudioVisualizer_List[i].transform.localScale.y, 0);
-        }
+        float[] spectrum = new float[128];
+        BG_Color.a = 0;
+        AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Hamming);
+
+        BG_Color.a += spectrum[5] + spectrum[6] + spectrum[7] + spectrum[8] + spectrum[9] + spectrum[10] + spectrum[11] + spectrum[12] + spectrum[20] + spectrum[21] + spectrum[22] + spectrum[23] + spectrum[24] + spectrum[25];
+
+        BG_Color.a = BG_Color.a * Modifier;
+        if (BG_Color.a > 1)
+            BG_Color.a = 1;
+        if (BG.GetComponent<CanvasRenderer>() != null)
+            BG.GetComponent<CanvasRenderer>().SetColor(BG_Color);
+        else
+            BG.GetComponent<SpriteRenderer>().color = BG_Color;
 
     }
 }
