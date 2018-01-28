@@ -1226,4 +1226,9 @@
     <Direction>UP</Direction>
     <stick>4</stick>
   </note>
+  <note>
+    <time>88.68999</time>
+    <Direction>END</Direction>
+    <stick>4</stick>
+  </note>
 </XML>
