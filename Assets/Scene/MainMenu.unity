@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG: {fileID: 748205448}
+  Modifier: 0
 --- !u!1 &145017573
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +626,16 @@ Prefab:
         type: 2}
       propertyPath: m_LocalScale.z
       value: 1.8846132
+      objectReference: {fileID: 0}
+    - target: {fileID: 114102851415705404, guid: 849b1028aff6d5c4c9afd0d61c31f54d,
+        type: 2}
+      propertyPath: m_Text
+      value: Gas Gas Gas
+      objectReference: {fileID: 0}
+    - target: {fileID: 114904820893398456, guid: 849b1028aff6d5c4c9afd0d61c31f54d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Lvl_GasGasGas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 849b1028aff6d5c4c9afd0d61c31f54d, type: 2}
