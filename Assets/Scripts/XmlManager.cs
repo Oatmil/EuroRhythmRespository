@@ -41,7 +41,12 @@ public class XmlManager : MonoBehaviour
 		StartCoroutine (PRINTXML_NOTES (0));
 		Debug.Log ("finish");
 
-	
+		gameOverScreen = GameObject.FindGameObjectWithTag ("EndScreen");
+		gameOverScreen.SetActive (false);
+		ScoreText = gameOverScreen.transform.GetChild (0).GetChild (0).GetComponent<Text> ();
+		retryButton = gameOverScreen.transform.GetChild (1).GetComponent<Button> ();
+		mainMenuButton = gameOverScreen.transform.GetChild (2).GetComponent < Button> ();
+
 	}
 
 	private void Update ()
@@ -123,16 +128,19 @@ public class XmlManager : MonoBehaviour
 					// Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
 					switch (nodeList [i].SelectSingleNode ("Direction").InnerText) {
 					case "UP":
-						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText),"UP");
+						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText), "UP");
 						break;
 					case "DOWN":
-						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText),"DOWN");
+						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText), "DOWN");
 						break;
 					case "RIGHT":
-						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText),"RIGHT");
+						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText), "RIGHT");
 						break;
 					case "LEFT":
-						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText),"LEFT");
+						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText), "LEFT");
+						break;
+					case "END":
+						b_stop = true;
 						break;
 					}
 
@@ -184,6 +192,7 @@ public class XmlManager : MonoBehaviour
 					case "END":
 						ScoreText.text = "Highest combo: " + GetComponent<SCORE_Manager> ().HighScore;
 						gameOverScreen.SetActive (true);
+						b_stop = true;
 						break;
 					}
 
@@ -208,7 +217,7 @@ public class XmlManager : MonoBehaviour
 			yield return new WaitForEndOfFrame ();
 			SpaceBar = false;
 			baba = true;
-			BeatSpawner.m_instance.SpawnNote (5,"UP");
+			BeatSpawner.m_instance.SpawnNote (5, "UP");
 			temptemp = 0;
 			do {
 				temptemp += Time.deltaTime;
