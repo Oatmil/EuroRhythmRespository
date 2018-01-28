@@ -44,6 +44,7 @@ public class LoadingScreen : MonoBehaviour
 	{
 		StartCoroutine(LoadLevelAdditive(_levelName));
 	}
+    
 
 	IEnumerator LoadLevelAdditive(string _levelName)
 	{
