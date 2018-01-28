@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/BaseLvl.unity
     guid: 218960ceb5253e84f9130ddca21f8438
+  - enabled: 1
+    path: Assets/Scene/Speed Speedy Boy.unity
+    guid: 4f55d5938a4f50f4e8beaa33b3c06e43

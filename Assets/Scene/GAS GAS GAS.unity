@@ -1089,7 +1089,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1507167261}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1693104973}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1507167261
@@ -1203,7 +1214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1673279778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1218,7 +1229,7 @@ RectTransform:
   - {fileID: 1941045370}
   - {fileID: 1507167259}
   m_Father: {fileID: 1792971156}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1363,9 +1374,20 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224332597077608618, guid: cd094501c19ce1f4f842af8b482e7a05,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd094501c19ce1f4f842af8b482e7a05, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1693104973 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114461042473918164, guid: cd094501c19ce1f4f842af8b482e7a05,
+    type: 2}
+  m_PrefabInternal: {fileID: 1693104972}
+  m_Script: {fileID: 11500000, guid: f196a2ff5ad2ea94791ed4ef0f0ac1f8, type: 3}
 --- !u!1 &1782223798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,7 +1541,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1941045372}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1693104973}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1941045372

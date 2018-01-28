@@ -39,7 +39,7 @@ public class BeatSpawner : MonoBehaviour {
 
 	}
 
-    public void SpawnNote(int i_point) // start from 1 - 9 from top left and across and than down
+    public void SpawnNote(int i_point , string Direction) // start from 1 - 9 from top left and across and than down
     {
         for (int i = i_point - 1; i < BAR_List.Capacity ; i+= BAR_Object.Count)
         {
@@ -50,6 +50,7 @@ public class BeatSpawner : MonoBehaviour {
 
                 BAR_List[i].GetComponent<BeatScript>().f_speed = Vector3.Distance(EndPoint.transform.localScale, StartPoint.transform.localScale) / SCORE_Manager.m_instance.f_NoteSpeed;
                 BAR_List[i].GetComponent<BeatScript>().endPoint = EndPoint;
+                BAR_List[i].GetComponent<BeatScript>().s_DirectionTogo = Direction;
                 Queue_List.Add(BAR_List[i]);
                 BAR_List[i].SetActive(true);
                 break;

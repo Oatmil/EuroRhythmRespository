@@ -41,16 +41,7 @@ public class XmlManager : MonoBehaviour
 		StartCoroutine (PRINTXML_NOTES (0));
 		Debug.Log ("finish");
 
-		//! Button set up
-		retryButton.onClick.AddListener (() => {
-			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
-			gameOverScreen.SetActive (false);
-		});
-
-		mainMenuButton.onClick.AddListener (() => {
-			SceneManager.LoadScene ("MainMenu");
-			gameOverScreen.SetActive (false);
-		});
+	
 	}
 
 	private void Update ()
@@ -132,16 +123,16 @@ public class XmlManager : MonoBehaviour
 					// Debug.Log(nodeList[i].SelectSingleNode("Direction").InnerText);
 					switch (nodeList [i].SelectSingleNode ("Direction").InnerText) {
 					case "UP":
-						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText));
+						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText),"UP");
 						break;
 					case "DOWN":
-						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText));
+						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText),"DOWN");
 						break;
 					case "RIGHT":
-						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText));
+						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText),"RIGHT");
 						break;
 					case "LEFT":
-						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText));
+						BeatSpawner.m_instance.SpawnNote (int.Parse (nodeList [i].SelectSingleNode ("stick").InnerText),"LEFT");
 						break;
 					}
 
@@ -217,7 +208,7 @@ public class XmlManager : MonoBehaviour
 			yield return new WaitForEndOfFrame ();
 			SpaceBar = false;
 			baba = true;
-			BeatSpawner.m_instance.SpawnNote (5);
+			BeatSpawner.m_instance.SpawnNote (5,"UP");
 			temptemp = 0;
 			do {
 				temptemp += Time.deltaTime;
@@ -268,6 +259,5 @@ public class XmlManager : MonoBehaviour
 		XMLDoc.DocumentElement.AppendChild (notes);
 
 	}
-
-
+    
 }

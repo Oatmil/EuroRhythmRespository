@@ -6,6 +6,8 @@ public class BeatScript : MonoBehaviour {
 
     public float f_speed;
     public GameObject endPoint;
+    public string s_DirectionTogo;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -22,7 +24,8 @@ public class BeatScript : MonoBehaviour {
             //    Debug.Log(Mathf.Abs(transform.localScale.x - endPoint.transform.localScale.x));
                 SCORE_Manager.m_instance.SCORE();
                 BeatSpawner.m_instance.Queue_List.RemoveAt(0);
-                gameObject.SetActive(false);
+                    HandController.m_instance.TriggerGrab(s_DirectionTogo);
+                    gameObject.SetActive(false);
             }
             }
         }
@@ -39,7 +42,9 @@ public class BeatScript : MonoBehaviour {
       //      Debug.Log(transform.GetChild(0).transform.localScale.x - endPoint.transform.localScale.x);
             SCORE_Manager.m_instance.TOTALMISS();
             BeatSpawner.m_instance.Queue_List.RemoveAt(0);
+            HandController.m_instance.TriggerGrab("MISS");
             gameObject.SetActive(false);
+
         }
     }
 }
